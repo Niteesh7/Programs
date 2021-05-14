@@ -1,0 +1,48 @@
+package hackerRanker;
+
+import java.util.Scanner;
+
+public class daigonal {
+   
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+int[][] a=new int[3][3];
+for(int i=0;i<3;i++)
+{
+    for(int j=0;j<3;j++)
+    {
+        a[i][j]=sc.nextInt();
+    }
+}
+  int m=a.length;
+        int rd=0,ld=0;
+    int sum=0;
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            if(i==j)
+            {
+           rd=rd+a[i][j];
+            } 
+            
+        }
+    }
+    int i=0,j=m-1;
+    while(j>=0)
+    {
+
+        ld=ld+a[i][j];
+        i++;
+        j--;
+    }
+    sum=rd-ld;
+    
+    System.out.println(sum);
+        
+
+    }
+
+}
